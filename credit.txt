@@ -1,0 +1,3 @@
+Montoro, A. (2021, December). Circular progress bar with single HTML element and CSS. CodePen. Retrieved from https://codepen.io/alvaromontoro/pen/poWgdVV
+Random Nerd Tutorials. (n.d.). ESP32 Web Server with SPIFFS (SPI Flash File System). Retrieved from https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
+Colorlib. (2022). Table 01. Retrieved from https://colorlib.com/wp/template/table-01/
