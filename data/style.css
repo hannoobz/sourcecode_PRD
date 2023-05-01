@@ -1,0 +1,96 @@
+html {
+  font-family: Helvetica;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.table {
+
+  width: 100%;
+  background: #fff;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0%;
+  margin-right: 10%;
+  table-layout: fixed; }
+  .table thead.thead-primary {
+    background: #0a5800; }
+  .table thead th {
+    border: none;
+    padding: 20px 30px;
+    font-size: 14px;
+    color: #fff; }
+  .table tbody tr {
+    margin-bottom: 10px; }
+  .table tbody th, .table tbody td {
+    border: none;
+    padding: 20px 30px;
+    border-bottom: 3px solid #f8f9fd;
+    font-size: 14px; }
+
+  body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+  background: #f8f9fd;
+  color: rgb(0, 0, 0); }
+
+		@keyframes progress {
+  0% { --percentage: 0; }
+  100% { --percentage: var(--value); }
+}
+
+@property --percentage {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: #0a5800;
+  --secondary: #adf;
+  --size: 200px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '% FULL';
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 10);
+  color: var(--primary);
+}
+
+body {
+  margin: 0% 15% 1% 15%;
+  display: flexbox;
+  place-items: center;
+  height: 100vh;
+  background: #f0fff1;
+}
+
+	
